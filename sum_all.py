@@ -9,7 +9,12 @@ def sum_all(arr: np.ndarray) -> int:
     Returns:
         int: sum of all numbers
     """
-    return arr.sum()
+    S = 0
+    r, c = arr.shape
+    for i in range(r):
+        for j in range(c):
+            S += arr[i, j]
+    return S
 
 
-print(sum_all(np.arange(10)))
+print(sum_all(np.array([[1, 2, 3]])))
